@@ -1,25 +1,32 @@
-Usuarios=[]
-def registrar_usuario(usuario,contraseña):
-    for u in Usuarios:
-        if u["usuario"]==usuario:
-            return False
-    if len(Usuarios)==0:
-        nuevo_id=1
+import funciones
+
+def user0(usuario,contraseña):
+    a="user"
+    b="12345"
+    if usuario==a and contraseña==b:
+        return True
     else:
-        nuevo_id=max(u["id"] for u in Usuarios)+1
+        return False
 
-    nuevo_usuario={
-        "id":nuevo_id,
-        "usuario":usuario,
-        "contraseña":contraseña
-    }
-    Usuarios.append(nuevo_usuario)
-    return True
-
-def ver_usuario():
-
-    return Usuarios
-
-def eliminar_usuario():
-    Usuarios=()
-
+def menu_usuario():
+    while True:
+        print("----Menu Usuario----")
+        print("-------------------------")
+        print("1.Ver informacion.")
+        print("2.Consultar datos.")
+        print("3.Realizar una operacion.")
+        print("4.Cerrar sesion.")
+        print("--------------------------")
+        opcion=int(input("Ingrese una opcion: "))
+        match opcion:
+            case 1:
+                print("Ver informacion")
+            case 2:
+                print("Consultar datos...")
+            case 3:
+                print("Realizar una operacion...")
+            case 4:
+                print("Saliendo....")
+                funciones.login()
+            case _:
+                print("Opcion no valida")

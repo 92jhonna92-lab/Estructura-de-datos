@@ -1,4 +1,4 @@
-import usuario
+import funciones
 
 def admin0(usuario,contraseña):
     a="admin"
@@ -9,31 +9,42 @@ def admin0(usuario,contraseña):
         return False
     
 def menu_adminitrador():
-    print("----Menu Adminitrador----")
-    print("-------------------------")
-    print("1.Registrar Usuario.")
-    print("2.Mostrar Usuario.")
-    print("3.Buscar Usuario.")
-    print("4.Modificar Usuario.")
-    print("5.Eliminar Usuario.")
-    print("5.Cerrar sesion.")
-    print("--------------------------")
-    opcion=int(input("Ingrese una opcion: "))
     while True:
+        print("----Menu Adminitrador----")
+        print("-------------------------")
+        print("1.Registrar Usuario.")
+        print("2.Mostrar Usuario.")
+        print("3.Buscar Usuario.")
+        print("4.Modificar Usuario.")
+        print("5.Eliminar Usuario.")
+        print("6.Cerrar sesion.")
+        print("--------------------------")
+        opcion=int(input("Ingrese una opcion: "))
         match opcion:
             case 1:
                 print("-----Registrar nuevo usuario----")
                 User=input("Ingrese usuario: ")
                 Pass=input("Ingrese contraseña: ")
-                registrado=usuario.registrar_usuario(User,Pass)
+                registrado=funciones.registrar_usuario(User,Pass)
                 if registrado:
                     print("Usuario registrado correctamente")
                 else:
                     print("El usuario ya existe")
                 break
             case 2:
-                usuario.ver_usuario()
+                print("----Listado de usuarios---- ")
+                funciones.mostrar_usuarios()
 
+            case 3:
+                print("----Buscar Usuario----")
+                
+            case 4:
+                print("----Modificar Usuario----")
+
+            case 5:
+                print("----Eliminar Usuario----")
+            case 6:
+                print("Saliendo....")
+                funciones.login()
             case _:
                 print("Opcion no valida")
-                break
