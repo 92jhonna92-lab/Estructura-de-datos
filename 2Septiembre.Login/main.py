@@ -5,9 +5,9 @@ us=input("Ingrese usuario: ")
 password=input("Ingrese contraseña: ")
 while True:
     if administrador.admin0(us,password):
-        print("Acceso concedidio")
-        funciones.menu_adminitrador()
+        print("--Acceso concedido--")
+        administrador.menu_adminitrador()
     else:
-        print("Acceso denegado")
+        print("--Acceso denegado--")
         break
 

@@ -1,4 +1,6 @@
-def admin(usuario,contraseña):
+import usuario
+
+def admin0(usuario,contraseña):
     a="admin"
     b="admin"
     if usuario==a and contraseña==b:
@@ -20,8 +22,18 @@ def menu_adminitrador():
     while True:
         match opcion:
             case 1:
-                print("en desarrollo")
+                print("-----Registrar nuevo usuario----")
+                User=input("Ingrese usuario: ")
+                Pass=input("Ingrese contraseña: ")
+                registrado=usuario.registrar_usuario(User,Pass)
+                if registrado:
+                    print("Usuario registrado correctamente")
+                else:
+                    print("El usuario ya existe")
                 break
+            case 2:
+                usuario.ver_usuario()
+
             case _:
                 print("Opcion no valida")
                 break
