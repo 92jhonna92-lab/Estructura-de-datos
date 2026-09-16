@@ -5,13 +5,13 @@
 ## 4 indique el estudiante aprobo o no (>=60)
 
 for estudiante in range(1,4):
-    print(f"Ingrese notas estudiante {estudiante}: ")
-    total=0
-    for nota in range(1,5):
-        notas=float(input(f"Ingrese nota {nota} del estudiante {estudiante}: "))
-        total=total+notas
-    promedio=total/4
+    notaT=0
+    for notas in range(1,5):
+        nota=int(input(f"ingrese del estudiante {estudiante} la nota {notas}: "))
+        notaT=notaT+nota
+    promedio=notaT/4
+    print(f"El promedio es: {promedio}")
     if promedio>=60:
-        print(f"Estudiante aprobado, Promedio de: {promedio}")
+        print("El estudiante aprobo")
     else:
-        print(f"Estudiante reprobado, Promedio de: {promedio}")
+        print("El estudiante reprobo")

@@ -30,8 +30,8 @@ for equipo in range(1,4):
         totalpj=totalpj+puntos
         promedio=totalpj/4
     if totalpj>mayor:
-        mayor=totalpj
-        equipo_mayor=equipo
+        mayor=totalpj #con esto sacamos el puntaje mayor
+        equipo_mayor=equipo #con esto sacamos el numero de equipo que es el mayor
     totalpe=totalpe+totalpj
 
     print(f"La suma de puntos del equipo {equipo} es {totalpe}") 

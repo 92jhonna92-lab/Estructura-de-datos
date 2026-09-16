@@ -1,7 +1,7 @@
 def area_triangulo(b,a):
     area=(b*a)/2
     print(f"El area del triangulo es: {area}")
-area_triangulo(5,5)
+print(area_triangulo(5,5))
 
 
 n1=int(input("Ingrese base del triangulo: "))

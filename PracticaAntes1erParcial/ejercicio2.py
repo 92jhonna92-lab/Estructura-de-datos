@@ -13,7 +13,7 @@ for aula in range(1,5):
             asist=int(input(f"El estudiante {estudiante} Asistio? 1(si)- 0(no): "))
             if asist==1:
                 conts=conts+1
-                break
+                break #con el break hacemos que no pida eternamente
             elif asist==0:
                 contn=contn+1
                 break

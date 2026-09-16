@@ -2,7 +2,7 @@ def suma(a,b):
     ad=a+b
     return ad
     #print(f"La suma es: {ad}")
-suma(10,10)
+print(suma(10,10))
 
 
 n1=int(input("Ingrese un numero: "))

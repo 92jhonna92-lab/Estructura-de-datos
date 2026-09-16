@@ -5,3 +5,11 @@ def verificacion():
     else:
         print(False)
 verificacion()
+
+edi=int(input("Ingresala"))
+def verificacion2(edad):
+    if edad<=18:
+        return True
+    else:
+        return False
+print(verificacion2(edi))

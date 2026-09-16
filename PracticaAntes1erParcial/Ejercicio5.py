@@ -1,5 +1,5 @@
-b=int(input("Ingrese numero: "))
-for i in range(1,b+1):
-    for j in range(1,11):
-        mult=i*j
-        print(f"{i} x {j}= {mult}")
+c=int(input("Ingrese hasta que numero desea multiplicar: "))
+for a in range(1,c+1):
+    for b in range(1,11):
+        mult=a*b
+        print(f"{a} x {b}= {mult}")
